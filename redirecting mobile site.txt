@@ -1,0 +1,34 @@
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks 
+Options +SymLinksIfOwnerMatch
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^actionflooringnsw.com.au [NC] 
+RewriteRule ^(.*)$ http://www.actionflooringnsw.com.au/$1 [L,R=301]
+
+#ErrorDocument 404 /404.html 
+
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} "Windows CE" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Ericsson" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Samsung" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "NetFront" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Palm OS" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Blazer" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Elaine" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "^WAP.*$" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Plucker" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "vodafone" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "iPhone" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "nokia" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "symbian" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "Opera Mini" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "BlackBerry" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "j2me" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "midp" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "htc" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "java" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "sony" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "android" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "AvantGo" [NC]
+RewriteRule ^$ http://www.windmilllandscapes.com.au/m [R,L]
+
